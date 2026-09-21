@@ -1,7 +1,13 @@
 <Solution>
-  <Project Path="ResumeAI.Api/ResumeAI.Api.csproj" />
-  <Project Path="ResumeAI.Application/ResumeAI.Application.csproj" />
-  <Project Path="ResumeAI.Domain/ResumeAI.Domain.csproj" />
-  <Project Path="ResumeAI.Infrastructure/ResumeAI.Infrastructure.csproj" />
-  <Project Path="ResumeAI.Shared/ResumeAI.Shared.csproj" />
+  <Folder Name="/src/">
+    <Project Path="ResumeAI.Api/ResumeAI.Api.csproj" />
+    <Project Path="ResumeAI.Application/ResumeAI.Application.csproj" />
+    <Project Path="ResumeAI.Domain/ResumeAI.Domain.csproj" />
+    <Project Path="ResumeAI.Infrastructure/ResumeAI.Infrastructure.csproj" />
+    <Project Path="ResumeAI.Shared/ResumeAI.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="ResumeAI.IntegrationTests/ResumeAI.IntegrationTests.csproj" />
+    <Project Path="ResumeAI.UnitTests/ResumeAI.UnitTests.csproj" />
+  </Folder>
 </Solution>
