@@ -2,8 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ResumeAI.Application.Interfaces;
 using ResumeAI.Domain.Entities;
 using ResumeAI.Infrastructure.Persistence;
+using ResumeAI.Infrastructure.Services;
 
 namespace ResumeAI.Infrastructure.Extensions;
 
@@ -33,7 +35,8 @@ public static class ServiceCollectionExtensions
         })
         .AddRoles<IdentityRole<Guid>>()
         .AddEntityFrameworkStores<ApplicationDbContext>();
-
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<IRefreshTokenService, RefreshTokenService>();
         return services;
     }
 }
